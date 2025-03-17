@@ -175,6 +175,7 @@ nav{
 display: flex;
 flex-direction: column;
 }
+
 h1{
 width: max-content;
 padding:30px 90px;
@@ -187,102 +188,110 @@ box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
 margin-left: 10%;
 margin-top:100px
 }
-.picture-container{
-  display: flex;
-  justify-content: center;
-  gap:8%;
-  margin-top: 80px;
-}
+
 .outer{
-  width: 165px;
-  height: 165px;
-  background-color: white;
+width: 80%;
+height: auto;
+background-color: white;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+box-shadow: inset -1px 4px 4px rgba(0, 0, 0, 0.5);
+margin: 0 auto;
+padding-top: 4%;
+padding-bottom:4% ;
+}
+.item{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset -1px 4px 4px rgba(0, 0, 0, 0.5);
+  flex-direction: column; /* 🔥 画像とテキストを縦に並べる */
+  align-items: center; 
+  width: 50%;
+  margin-bottom: 20px; /* 🔥 下の余白を設定 */
+  position: relative;
 }
-.inner{
-  width: 90%;
-  height: 90%;
-  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
-}
-.inner img{
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-.profile-container{
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
-  margin: 0 auto;/* 箱をセンタ0ーに */
-  margin-top: 80px;
-}
-.name-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 70px ;
-  padding-left: 10%;  
-}
-.name-container img{
-  width: 118px;
-  height: 118px;
-}
-h2{
-  font-size: 24px;
-  font-weight: 300;
-}
-.profile-container p{
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 2.8;
-  letter-spacing: 13%;
-  padding: 50px 70px;
-}
-.message-container{
- width: 80%;
- box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
- margin: 0 auto;/* 箱をセンタ0ーに */
- margin-top: 60px;
- margin-bottom: 30px;
-}
-.message-container h2{
-text-align: right;
-padding:40px 10% ;
-}
-.message-container p{
-  padding: 10px 10% 50px ;
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 2.8;
-  letter-spacing: 13%;
-}
-.top-container{
-  min-height: 100vh;
-}
-.button {
-  display: inline-block;
-  width: max-content;
+.item p{
+  display: inline-flex;
+  justify-content: center; /* 🔥 テキストを中央配置 */
+  align-items: center; /* 🔥 縦の中央揃え */
+  width: 20%;
+  height: 10%;
   padding: 10px 40px;
+  background-color: #ffffff;
+  color: rgba(255, 255, 255,0.35);
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8),0 0 #555555; /* インナーシャドウ風 */
+  font-size: 16px;
+  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.4);
+  margin:5% 0 1%;
+  position: absolute;
+  left: 25%;
+  top: -15px;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.item p:hover{
+
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 1),0 0 #555555; /* インナーシャドウ風 */
+  background-color: rgba(255, 255, 255, 1);
+}
+.item img{
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+display: block;
+box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.under-container{
+  margin-bottom: 60px;
+}
+.button-container{
+  margin: 30px 0;
+  text-align: center;
+  
+}
+.button-container a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
   background-color: #ebebeb;
   color: #cdcdcd;
   text-shadow: 0px -1.5px 1.5px #3f3f3f,0px 1.5px 1.5px #ffffff ;/* インナーシャドウ風 */
   font-weight: 250;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   box-shadow: 0px 4px 8.2px rgba(0, 0, 0, 0.3);
-  margin-right: 10%;
-  margin-bottom: 100px;
-  margin-left: auto;
 }
-.button:hover{
+.button-container a:hover{
   color: #9e9e9e;
   text-shadow: 0px -1.5px 1.5px black,0px 1.5px 1.5px #ffffff ;/* インナーシャドウ風 */
 }
-.button:active{
+.button-container a:active{
   transform: translateX(-1px) translateY(1px) ;
   box-shadow: -0.5px 1px 2px  rgba(0, 0, 0, 0.5);
+}
+.exp-container{
+  width: 80%;
+  
+  background-color:white;
+  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-bottom: 80px;
+}
+h2{
+  font-size: 20px;
+  text-align: right;
+  font-weight: 300;
+  padding: 60px 10% 30px;
+}
+h3{
+  font-size: 16px;
+  font-weight: 300;
+  padding: 25px 10% 10px;
+
+}
+.exp-container p{
+  font-size: 14px;
+  font-weight: 300;
+  padding: 0px 10%;
+  line-height:2.2 ;
 }
