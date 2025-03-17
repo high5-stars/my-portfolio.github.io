@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>SHOWCASE</title>
+        <meta name="description" content="webデザイナーkiyomiのポートフォリオサイト">
+        <!--レスポンシブに対応させるためのコード-->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--リセットCSS→自作のcssの上に書くこと-->
+         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style-contact.css">
+   
+        <!--googleフォントの読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <!--ファビコンの読み込み-->
+        <link rel="icon" type="image/ico" href="images/favicon.ico">
+    </head>
+<body>
+<div class="home">
+    <aside>
+        <div class="outer-1">
+            <a href="index.html" class="inner-1">
+                <p class="small-text">©SHOWCASE All rights reserved</p>
+                <p class="large-text">SHOWCASE</p>
+            </a>
+        </div><!--outer-square-->
+    </aside>
+    <div class="main">
+        <div class="top-container">
+            <h1>contact</h1>
+            <div class="exp-container">
+                
+                    <p>当ホームページをご覧いただきありがとうございます。<br><br>
+                    ・信頼感のあるホームページを制作を依頼するには？<br>
+                    ・SEO対策をとって検索流入を増やしたい！<br>
+                    ・ランディングページの成約率が伸び悩んでいる。<br>
+                    ・相場は？費用はいくらぐらいかかるの？<br><br>
+                    などWEBに関することから<br><br>
+                    ・このページのカラーはどういう理由で選んでいるの？<br>
+                    ・このページのアニメーションの意図は？<br>
+                    ・もっとこうした方が良くなると思う<br><br>
+                    などの作品に関することまで<br>
+                    些細なご質問、お悩みでもお気軽にお問い合わせください。<br><br>
+                    WEB制作の他、名刺制作やチラシ制作等のご依頼も承っております。</p>
+            </div><!--exp-container-->
+        </div><!--top-container-->
+        <div class="form-container">
+            <form action="#" method="post">
+                <div class="upper-container">
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" placeholder="お名前を入力" required></div>
+                    <div class="form-group">
+                    <label for="name">会社名、屋号（任意）</label>
+                    <input type="text" id="company" name="company" placeholder="会社名、屋号を入力" required></div>
+                    <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="メールアドレスを入力" required></div>
+                    <div class="form-group">
+                    <label for="phone">電話番号</label>
+                    <input type="tel" id="phone" name="phone" placeholder="電話番号を入力" required></div>
+                </div><!--upper-container-->
+                <div class="form-group2">
+                <label for="message">メッセージ:</label>
+                <textarea id="message" name="message" placeholder="メッセージを入力"></textarea></div>
+                <button type="submit">相談<span>o</span>r質問してみる</button>
+            </form>
+            <script>
+                document.querySelector('form').addEventListener('submit', function(event) {
+                    event.preventDefault();  // フォームのデフォルト送信を防止
+                
+                    // 送信後に完了ページへ遷移
+                    window.location.href = 'contact-2.html';  // 完了ページのURLにリダイレクト
+                });
+                </script>
+            <div class="sns-container">
+                      <div class="sns-icons">
+                            <a href="https://facebook.com" target="_blank" class="sns-link">
+                                <img src="images/logo1.png" alt="Facebook" class="sns-icon">
+                             </a>
+                             <a href="https://instagram.com" target="_blank" class="sns-link">
+                                <img src="images/logo2.png" alt="Twitter" class="sns-icon">
+                            </a>
+                      </div><!--sns-icons-->
+                      <p class="text">Follow Me</p>
+            </div><!--sns-container-->
+        </div><!--form-container-->
+    </div><!--main-->   
+    <nav class="square-2">
+            <ul class="main-nav">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </nav><!--square square-2-->
+</div><!--home-->
+    
+</body>
+</html>
