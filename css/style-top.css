@@ -478,7 +478,7 @@ line-height: 2em;
   max-width: 33vw; /* 最大幅をページ幅の33%に */
  }
  .container{
-  min-height: 78vh;
+  min-height: 100vh;
  }
 
 
