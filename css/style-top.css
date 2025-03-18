@@ -54,8 +54,6 @@ body{
 .home{
   display: flex;
   width: 100%;
- 
-
 }
 aside{
   width: 10%;
@@ -64,13 +62,11 @@ aside{
 .main { 
   width: 80%;
   background-color: white;
- 
  }
 nav{
   width:10% ;
   background-color:white;
-  
- }
+  }
 
  /* タイトルの四角とボタンの四角の親 */
  .container{
@@ -87,10 +83,10 @@ nav{
     display: flex;
     justify-content: flex-end; /* 右寄せ */
     align-items: right;
-    padding-top: 20px;
-    padding-right: 20px;
+    padding-top: 2%;
+    padding-right: 2%;
     left: 15%;
-    top:60%;
+    top:580px;
     box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
     position: absolute;
   }
@@ -105,12 +101,13 @@ nav{
     display: flex;
     flex-direction: column; /* 縦並び */
     align-items: flex-end; /* 右寄せ */
+    justify-content: space-between;
   }
   
   .text {
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 50px; /* 文字とアイコンの間隔 */
+   
     line-height: 1.7;
     text-align: right;
     color: #c3c3c3;
@@ -119,17 +116,21 @@ nav{
  
   .sns-icons {
   display: flex;
-  gap: 20px; /* SNSアイコンの間隔 */
+  gap: 1.5vw; /* SNSアイコンの間隔 */
+  padding-bottom: 15%;
   }
   
   .sns-icon {
     width: 38px; /* アイコンサイズ */
-    height: 38px;
+    height: auto;
+    aspect-ratio: 1 / 1; /* 1:1比率を維持 */
+    min-width: 30px;
   }
  /* クリックのたびに色が変わるbox */
 .outer-2{
-  width: 166px;
-  height: 166px;
+  width: 13%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -140,8 +141,9 @@ nav{
   box-shadow:inset -1px 4px 4px rgba(0, 0, 0, 0.2); /* インナーシャドウ */
 }
 .inner-2{
-  width: 110px;
-  height: 110px;
+  width: 70%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
   display: flex;
   justify-content:center;
@@ -150,8 +152,9 @@ nav{
   box-shadow:inset -1px 4px 4px rgba(0, 0, 0, 0.2); /* インナーシャドウ */
 }
 .outer-3{
-  width: 115px;
-  height: 115px;
+  width: 9%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -162,8 +165,9 @@ nav{
   box-shadow:inset -1px 4px 4px rgba(0, 0, 0, 0.2); /* インナーシャドウ */
 }
 .inner-3{
-  width: 76px;
-  height: 76px;
+  width: 65%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -173,8 +177,9 @@ nav{
   box-shadow:inset -1px 4px 4px rgba(0, 0, 0, 0.2); /* インナーシャドウ */
 }
 .outer-4{
-  width: 115px;
-  height: 115px;
+  width: 9%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -185,8 +190,9 @@ nav{
   box-shadow:inset -1px 4px 4px rgba(0, 0, 0, 0.2); /* インナーシャドウ */
 }
 .inner-4{
-  width: 76px;
-  height: 76px;
+  width: 65%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -233,23 +239,20 @@ text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
 .box-container {
 background-color: white;
 min-height: auto;
-display: grid;
-grid-template-columns: repeat(3, 1fr); /* 3列 */
-grid-template-rows: repeat(2, 1fr); /* 2行 */
+display: flex;
+flex-wrap: wrap;
 column-gap: 5%;
 row-gap: 30px;
 justify-content: center;
-place-items: center;
-margin-left:5%;
-margin-right: 5%;
+
 padding-bottom: 100px;
 }
 .outer-5 {
 width :100%;
-height:0;
-padding-top: 100%;/* 正方形を維持 */
-max-width: 33vw; /* 最大幅をページ幅の33%に */
-max-height: 33vw; /* 最大高さをページ幅の33%に */
+height: auto;
+aspect-ratio: 1 / 1; /* 1:1比率を維持 */
+max-width: 20vw; /* 最大幅をページ幅の33%に */
+
 background-color: #ffffff;
 display: flex;
 justify-content: center;
@@ -292,8 +295,8 @@ position: relative;
   text-decoration: none;
   font-size: 16px;
   box-shadow: 0px 4px 8.2px rgba(0, 0, 0, 0.3);
-  grid-column: 3;
-  justify-self: end;
+  
+  
   margin-right: 20px;
   margin-top: 30px;
 }
@@ -403,4 +406,132 @@ position: relative;
   letter-spacing: 1.40em;
   text-shadow: 2px 2px 1px gainsboro,0 0 white; /* インナーシャドウ風 */
 }
+@media(max-width:1050px){
+.outer-1{
+  width: 1400px; 
+  height: 80px; 
+  top: 1380px;
+  margin-left: 2%;
+}
+.inner-1{
+    width: 1350px;
+    height: 60px;
+  }
+.large-text{
+  font-size:44px ;
+}
+.outer-3{
+  display: none;
+}
+.outer-2{
+  width: 20%;
+  top: 380px;
+ left: 60%;
+ min-width: 110px;
+}
+.outer-4{
+  width: 13%;
+  top: 200px;
+  left: 32%;
+  min-width: 70px;
+}
+.square-1{
+  width: 28%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
+  min-width: 150px;
+  top: 530px;
+  left: 20%;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+.sns-icons{
+  gap: 2.0vw;
+}
+.text{
+  font-size:clamp(16px, 3vw, 22px) ;
+line-height: 2em;
+}
+.symbol1{
+  font-size: clamp(20px, 6vw, 40px);
+}
+.symbol3{
+  font-size: clamp(14px, 6vw, 24px);
+}
+.square-2{
+  width: 15vw;
+  min-width: 145px;
+  height: 255px;
+  right: 3%;
+  margin-top: 20px;
+}
+.main-nav a {
+  font-size: clamp(13px, 2vw, 16px);
+}
+.main-nav li {
+  margin-top: 14%;
+  margin-right:  2vw;
+  line-height: 2.2em;
+}
 
+.outer-5 {
+  max-width: 33vw; /* 最大幅をページ幅の33%に */
+ }
+ .container{
+  min-height: 78vh;
+ }
+
+
+@media(max-width:600px){
+.outer-1{
+  width: 1280px; 
+  height: 75px; 
+  top: 1270px;
+ margin-left: 5%;
+}
+.inner-1{
+  width: 1230px;
+  height: 60px;
+}
+.large-text{
+  font-size:1.9rem ;
+}
+.square-1  {
+  padding-top: 2.5%;
+  padding-right: 2.5%;
+  left: 18%;
+  top:400px;
+}
+.outer-2{
+ min-width: 100px;
+ top: 270px;
+ left: 50%;
+}
+.outer-4{
+  min-width: 70px;
+  top: 150px;
+  left: 25%;
+}
+.sns-icons {
+  padding-bottom: 10%;
+  gap: 3.3vw;
+  }
+.text{
+    line-height: 180%;
+}
+.square-2{
+    width: 18vw;
+    min-width: 90px;
+    height: 175px;
+    right: 3%;
+    margin-top: 20px;
+}
+.main-nav li {
+    line-height: 160%;
+  }
+  .box-container {
+    grid-template-columns: 1fr; /* 1列 */
+    grid-template-rows: repeat(6, 1fr); /* 6行 */
+}
+
+}
