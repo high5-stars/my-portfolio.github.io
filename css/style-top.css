@@ -477,9 +477,6 @@ line-height: 2em;
 .outer-5 {
   max-width: 33vw; /* 最大幅をページ幅の33%に */
  }
- .container{
-  min-height: 100vh;
- }
 
 
 @media(max-width:600px){
@@ -504,12 +501,12 @@ line-height: 2em;
 }
 .outer-2{
  min-width: 100px;
- top: 270px;
+ top: 250px;
  left: 50%;
 }
 .outer-4{
   min-width: 70px;
-  top: 150px;
+  top: 140px;
   left: 25%;
 }
 .sns-icons {
