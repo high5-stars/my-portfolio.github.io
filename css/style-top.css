@@ -159,7 +159,7 @@ nav{
   box-shadow:inset -1px 4px 4px rgba(0, 0, 0, 0.2); /* インナーシャドウ */
 }
 .outer-3{
-  width: 9%;
+  width: 7%;
   height: auto;
   aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
@@ -184,7 +184,7 @@ nav{
   box-shadow:inset -1px 4px 4px rgba(0, 0, 0, 0.2); /* インナーシャドウ */
 }
 .outer-4{
-  width: 9%;
+  width: 8%;
   height: auto;
   aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   background-color: #ffffff;
