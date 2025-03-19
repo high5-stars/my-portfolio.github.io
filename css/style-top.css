@@ -62,6 +62,9 @@ aside{
 .main { 
   width: 80%;
   background-color: white;
+display: flex;
+flex-direction: column;
+
  }
 nav{
   width:10% ;
@@ -71,22 +74,26 @@ nav{
  /* タイトルの四角とボタンの四角の親 */
  .container{
   min-height: 100vh;
-  background-color:white;
+  background-color:rgb(255, 255, 255);
   display: flex;
   align-items: center;
   flex-direction: column;
+  
   }
  .square-1  {
-    width: 258px;
-    height: 258px;
+    width: 17%;
+    height: auto;
+    aspect-ratio: 1/1;
+    max-width: 500px;
+    min-width: 220px;
     background-color: #ebebeb;
     display: flex;
     justify-content: flex-end; /* 右寄せ */
     align-items: right;
-    padding-top: 2%;
-    padding-right: 2%;
-    left: 15%;
-    top:580px;
+    padding-top: 1.5%;
+    padding-right: 1.5%;
+    left: 16%;
+    top:60%;
     box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
     position: absolute;
   }
@@ -105,9 +112,9 @@ nav{
   }
   
   .text {
+     
     font-size: 24px;
     font-weight: 300;
-   
     line-height: 1.7;
     text-align: right;
     color: #c3c3c3;
@@ -205,14 +212,14 @@ input {
 }
 
 .symbol1 {
-  font-size: 40px;
+  font-size: 44px;
   cursor: pointer;
   color: rgb(255, 255, 255);
   text-shadow:-1px 4px 4px rgba(0, 0, 0, 0.5) ;
   
 }
 .symbol2 , .symbol3 {
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
   color: rgb(255, 255, 255);
   text-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5) ;
@@ -244,14 +251,14 @@ flex-wrap: wrap;
 column-gap: 5%;
 row-gap: 30px;
 justify-content: center;
-
-padding-bottom: 100px;
+padding-bottom: 30px;
+background-color: rgba(255, 255, 255, 0); /* 🔥 背景のみ透明に */
 }
 .outer-5 {
 width :100%;
 height: auto;
 aspect-ratio: 1 / 1; /* 1:1比率を維持 */
-max-width: 20vw; /* 最大幅をページ幅の33%に */
+max-width: 20vw;
 
 background-color: #ffffff;
 display: flex;
@@ -286,7 +293,7 @@ position: relative;
   box-shadow: inset -3px 4px 2px  black;
 }
 .button {
-  display: inline-block;
+  display: inline-flex;
   padding: 15px 30px;
   background-color: #ebebeb;
   color: #cdcdcd;
@@ -295,11 +302,10 @@ position: relative;
   text-decoration: none;
   font-size: 16px;
   box-shadow: 0px 4px 8.2px rgba(0, 0, 0, 0.3);
-  
-  
-  margin-right: 20px;
-  margin-top: 30px;
+  position: absolute;
+  right: 7.5%;
 }
+
 .button:hover{
   color: #9e9e9e;
   text-shadow: 0px -1.5px 1.5px black,0px 1.5px 1.5px #ffffff ;/* インナーシャドウ風 */
@@ -307,6 +313,11 @@ position: relative;
 .button:active{
   transform: translateX(-1px) translateY(1px) ;
   box-shadow: -0.5px 1px 2px  rgba(0, 0, 0, 0.5);
+}
+.under-container{
+position: relative;
+margin-top: 60px;
+margin-bottom: 20%;
 }
 
 /* ナビゲーションメニュー */
@@ -348,7 +359,7 @@ position: relative;
 /* 左側タイトル */
 /* 外側の四角 */
 .outer-1{
-  width: 1587px;
+  width: 1570px;
   height: 90px;
   background-color: #ffffff;
   display: flex;
@@ -363,8 +374,8 @@ position: relative;
 }
 /* 内側の四角 */
 .inner-1{
-  width: 1528px;
-  height: 64px;
+  width: 98%;
+  height: 75%;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -408,40 +419,33 @@ position: relative;
 }
 @media(max-width:1050px){
 .outer-1{
-  width: 1400px; 
-  height: 80px; 
-  top: 1380px;
+  width: 2500px; 
+  top: 2500px;
   margin-left: 2%;
 }
-.inner-1{
-    width: 1350px;
-    height: 60px;
-  }
-.large-text{
-  font-size:44px ;
-}
+
 .outer-3{
   display: none;
 }
 .outer-2{
   width: 20%;
-  top: 380px;
- left: 60%;
+  top: 40%;
+ left: 55%;
  min-width: 110px;
 }
 .outer-4{
   width: 13%;
-  top: 200px;
+  top: 20%;
   left: 32%;
   min-width: 70px;
 }
 .square-1{
-  width: 28%;
+  width: 25%;
   height: auto;
   aspect-ratio: 1 / 1; /* 1:1比率を維持 */
   min-width: 150px;
-  top: 530px;
-  left: 20%;
+  left: 17.7%;
+  top: 65%;
   padding-top: 2%;
   padding-right: 2%;
 }
@@ -463,7 +467,7 @@ line-height: 2em;
   min-width: 145px;
   height: 255px;
   right: 3%;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .main-nav a {
   font-size: clamp(13px, 2vw, 16px);
@@ -475,51 +479,66 @@ line-height: 2em;
 }
 
 .outer-5 {
-  max-width: 33vw; /* 最大幅をページ幅の33%に */
- }
+  max-width: 30vw; 
+}
 
+}
+@media(max-width:920px){
+  .outer-1{
+    width: 2100px; 
+    top: 2100px;
+  }
+  .text{
+    line-height: 1.5em;
+  }
 
+  }
+@media(max-width:780px){
+    .outer-1{
+      width: 1850px; 
+      top: 1850px;
+    }
+
+    }
 @media(max-width:600px){
 .outer-1{
   width: 1280px; 
-  height: 75px; 
+  height: 65px; 
   top: 1270px;
  margin-left: 5%;
 }
-.inner-1{
-  width: 1230px;
-  height: 60px;
-}
+
 .large-text{
-  font-size:1.9rem ;
+  font-size:32px ;
+}
+.small-text{
+  font-size: 10px;
 }
 .square-1  {
   padding-top: 2.5%;
   padding-right: 2.5%;
   left: 18%;
-  top:400px;
+
 }
 .outer-2{
  min-width: 100px;
- top: 250px;
+
  left: 50%;
 }
 .outer-4{
   min-width: 70px;
-  top: 140px;
+
   left: 25%;
 }
 .sns-icons {
   padding-bottom: 10%;
   gap: 3.3vw;
   }
-.text{
-    line-height: 180%;
-}
+
 .square-2{
     width: 18vw;
     min-width: 90px;
-    height: 175px;
+    height: 190px;
     right: 3%;
     margin-top: 20px;
 }
@@ -530,5 +549,39 @@ line-height: 2em;
     grid-template-columns: 1fr; /* 1列 */
     grid-template-rows: repeat(6, 1fr); /* 6行 */
 }
-
+.outer-5 {
+  max-width: 33vw; 
 }
+.button {
+ 
+    padding: 10px 20px;
+    font-size: 13px;
+ 
+}
+}
+@media(max-width:450px){
+  .outer-1{
+    width: 1500px; 
+    top: 1500px;
+  }
+  .under-container{
+    margin-bottom: 40%;
+    }
+  
+}
+@media(max-width:390px){
+  .outer-1{
+    width: 1400px; 
+    top: 1400px;}
+  .under-container{
+      margin-bottom: 30%;
+    }
+  
+}
+@media(max-width:380px){
+  .outer-1{
+    width: 1200px; 
+    top: 1200px;}
+ 
+}
+ 
