@@ -58,6 +58,7 @@ body{
 aside{
   width: 10%;
   background-color: white;
+  position: relative;
 }
 .main { 
   width: 80%;
@@ -85,15 +86,14 @@ nav{
     height: auto;
     aspect-ratio: 1/1;
     max-width: 500px;
-    min-width: 220px;
+    min-width: 250px;
     background-color: #ebebeb;
     display: flex;
     justify-content: flex-end; /* 右寄せ */
-    align-items: right;
     padding-top: 1.3%;
     padding-right: 1.3%;
     left: 16%;
-    top:60%;
+    top:60vh;
     box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
     position: absolute;
   }
@@ -245,14 +245,13 @@ text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
 /* 6つのボックスを並べるコンテナ */
 .box-container {
 background-color: white;
-min-height: auto;
 display: flex;
 flex-wrap: wrap;
 column-gap: 5%;
 row-gap: 30px;
 justify-content: center;
 padding-bottom: 30px;
-background-color: rgba(255, 255, 255, 0); /* 🔥 背景のみ透明に */
+background-color: transparent; /* 🔥 背景のみ透明に */
 }
 .outer-5 {
 width :100%;
@@ -323,15 +322,15 @@ margin-bottom: 20%;
 /* ナビゲーションメニュー */
  .square-2{
   width: 146px;
-  height: 254px;
-  background-color: #ffffff;
+  height: auto;
+  aspect-ratio: 1 / 1.7; 
   display: flex;
   justify-content: flex-end; /* 右寄せ */
   position: fixed;/* スクロールしても固定 */
   right: 3%;
   margin-top: 20px;
   box-shadow:-1px 4px 4px rgba(0, 0, 0, 0.35) ;
-  background-color: rgba(255, 255, 255, 0); /* 🔥 背景のみ透明に */
+  background-color: transparent; /* 🔥 背景のみ透明に */
 }
 .main-nav {
   list-style: none;
@@ -359,17 +358,16 @@ margin-bottom: 20%;
 /* 左側タイトル */
 /* 外側の四角 */
 .outer-1{
-  width: 1570px;
+  width: 100px;
   height: 90px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 10%; /* 左端に寄せる */
-  top: 1570px;
-  transform: rotate(270deg) translateY(-50%); /* 270°回転しつつ中央寄せ */
-  transform-origin: left center; /* 左上を基準に回転 */
+ top: 100px;
+  transform: rotate(270deg) translateY(30%) ; /* 270°回転しつつ左端寄せ */
+  transform-origin: left top; /* 左上を基準に回転 */
   box-shadow: -1px -4px 4px rgba(0, 0, 0, 0.35); /* ドロップシャドウ */
 }
 /* 内側の四角 */
@@ -414,16 +412,10 @@ margin-bottom: 20%;
   font-size: 48px;
   color: rgba(255, 255, 255,0.35);
   text-align: right;
-  letter-spacing: 1.40em;
+  letter-spacing: 1.4em;
   text-shadow: 2px 2px 1px gainsboro,0 0 white; /* インナーシャドウ風 */
 }
 @media(max-width:1050px){
-.outer-1{
-  width: 2500px; 
-  top: 2500px;
-  margin-left: 2%;
-}
-
 .outer-3{
   display: none;
 }
@@ -441,11 +433,9 @@ margin-bottom: 20%;
 }
 .square-1{
   width: 25%;
-  height: auto;
-  aspect-ratio: 1 / 1; /* 1:1比率を維持 */
-  min-width: 150px;
+  min-width: 220px;
   left: 17.7%;
-  top: 65%;
+  top: 65vh;
   padding-top: 2%;
   padding-right: 2%;
 }
@@ -453,8 +443,9 @@ margin-bottom: 20%;
   gap: 2.0vw;
 }
 .text{
-  font-size:clamp(16px, 3vw, 22px) ;
-line-height: 2em;
+  font-size: 22px ;
+line-height: 1.7em;
+
 }
 .symbol1{
   font-size: clamp(20px, 6vw, 40px);
@@ -464,48 +455,28 @@ line-height: 2em;
 }
 .square-2{
   width: 15vw;
-  min-width: 145px;
-  height: 255px;
+  min-width: 140px;
+  min-height: 260px;
+ 
   right: 3%;
   margin-top: 50px;
 }
 .main-nav a {
-  font-size: clamp(13px, 2vw, 16px);
+  font-size: 16px;
 }
 .main-nav li {
   margin-top: 14%;
   margin-right:  2vw;
   line-height: 2.2em;
 }
-
 .outer-5 {
   max-width: 30vw; 
 }
-
 }
-@media(max-width:920px){
-  .outer-1{
-    width: 2100px; 
-    top: 2100px;
-  }
-  .text{
-    line-height: 1.5em;
-  }
-
-  }
-@media(max-width:780px){
-    .outer-1{
-      width: 1850px; 
-      top: 1850px;
-    }
-
-    }
-@media(max-width:600px){
+  @media(max-width:600px){
 .outer-1{
-  width: 1280px; 
-  height: 65px; 
-  top: 1270px;
- margin-left: 5%;
+  transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
+  height: 80px;
 }
 
 .large-text{
@@ -518,7 +489,11 @@ line-height: 2em;
   padding-top: 2.5%;
   padding-right: 2.5%;
   left: 18%;
-
+  width: 20%;
+  min-width: 180px;
+}
+.text{
+  font-size: 18px;
 }
 .outer-2{
  min-width: 100px;
@@ -536,52 +511,44 @@ line-height: 2em;
   }
 
 .square-2{
-    width: 18vw;
-    min-width: 90px;
-    height: 190px;
+    width: 20vw;
+    min-width: 100px;
+    min-height: 190px;
     right: 3%;
     margin-top: 20px;
+}
+.main-nav a {
+  font-size: 14px;
 }
 .main-nav li {
     line-height: 160%;
   }
-  .box-container {
-    grid-template-columns: 1fr; /* 1列 */
-    grid-template-rows: repeat(6, 1fr); /* 6行 */
-}
+
 .outer-5 {
   max-width: 33vw; 
 }
 .button {
- 
     padding: 10px 20px;
     font-size: 13px;
- 
 }
 }
 @media(max-width:450px){
   .outer-1{
-    width: 1500px; 
-    top: 1500px;
+    transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
+    height: 60px;
   }
   .under-container{
     margin-bottom: 40%;
     }
-  
+    .square-1  {
+      min-width: 160px;
+    }
 }
 @media(max-width:390px){
-  .outer-1{
-    width: 1400px; 
-    top: 1400px;}
+
   .under-container{
       margin-bottom: 30%;
     }
   
 }
-@media(max-width:380px){
-  .outer-1{
-    width: 1200px; 
-    top: 1200px;}
- 
-}
- 
+
