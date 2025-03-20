@@ -75,23 +75,22 @@ nav{
 /* 左側タイトル */
 /* 外側の四角 */
 .outer-1{
-  width: 1587px;
+  width: 100px;
   height: 90px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 10%; /* 左端に寄せる */
-  top: 1570px;
-  transform: rotate(270deg) translateY(-50%); /* 270°回転しつつ中央寄せ */
-  transform-origin: left center; /* 左上を基準に回転 */
+ top: 100px;
+  transform: rotate(270deg) translateY(30%) ; /* 270°回転しつつ左端寄せ */
+  transform-origin: left top; /* 左上を基準に回転 */
   box-shadow: -1px -4px 4px rgba(0, 0, 0, 0.35); /* ドロップシャドウ */
 }
 /* 内側の四角 */
 .inner-1{
-  width: 1528px;
-  height: 64px;
+  width: 98%;
+  height: 75%;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -111,6 +110,7 @@ nav{
 .inner-1:active{
   -webkit-transform: translateX(-0.3px) translateY(0.3px) scale(0.995);
   box-shadow: inset -1px -1px 3px  rgba(0, 0, 0, 0.35); 
+  
 }
 .inner-1:active p{
   color: rgb(240, 240, 240);
@@ -132,20 +132,18 @@ nav{
   letter-spacing: 1.40em;
   text-shadow: 2px 2px 1px gainsboro,0 0 white; /* インナーシャドウ風 */
 }
-
-
 /* ナビゲーションメニュー */
- .square-2{
+.square-2{
   width: 146px;
-  height: 254px;
-  background-color: #ffffff;
+  height: auto;
+  aspect-ratio: 1 / 1.7; 
   display: flex;
   justify-content: flex-end; /* 右寄せ */
   position: fixed;/* スクロールしても固定 */
   right: 3%;
   margin-top: 20px;
   box-shadow:-1px 4px 4px rgba(0, 0, 0, 0.35) ;
-  background-color: rgba(255, 255, 255, 0); /* 🔥 背景のみ透明に */
+  background-color: transparent; /* 🔥 背景のみ透明に */
 }
 .main-nav {
   list-style: none;
@@ -269,3 +267,59 @@ h3{
   padding: 0px 10%;
   line-height:2.2 ;
 }
+@media(max-width:1000px){
+  /* ナビゲーションメニュー */
+    .square-2{
+    width: 15vw;
+    min-width: 140px;
+    min-height: 260px;
+    right: 3%;
+    margin-top: 50px;
+    }
+    .main-nav a {
+    font-size: 16px;
+    }
+    .main-nav li {
+    margin-top: 14%;
+    margin-right:2vw;
+    line-height: 2.2em;
+    }
+    }
+  @media(max-width:600px){
+    /* 左側タイトル */
+    .outer-1{
+    transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
+    height: 80px;
+    }
+    .large-text{
+    font-size:32px ;
+    }
+    .small-text{
+    font-size: 10px;
+    }
+    /* ナビゲーションメニュー */
+    .square-2{
+    width: 20vw;
+    min-width: 100px;
+    min-height: 190px;
+    right: 3%;
+    margin-top: 20px;
+    }
+    .main-nav a {
+    font-size: 14px;
+    }
+    .main-nav li{
+    line-height: 160%;
+    }
+    }
+    @media(max-width:450px){
+    /* 左側タイトル */
+    .outer-1{
+    transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
+    height: 60px;
+    }
+    }
+    @media(max-width:390px){
+  
+    }
+    
