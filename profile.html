@@ -92,36 +92,36 @@
   </script>
   <script>
     function updateLargeTextSpacing() {
-        const containerHeight = document.querySelector(".container").offsetHeight; // `.container` の高さを取得
-        const largeText = document.querySelector(".large-text");
-        const characterCount = 8; // 文字数（英字8文字）
-  
-        // 現在の画面幅を取得
-        const screenWidth = window.innerWidth;
-  
-        // 画面幅によって font-size を切り替え
-        const charWidth = screenWidth <= 600 ? 32 : 48; // 600px以下なら32px、それ以上なら48px
-  
-        // letter-spacing の計算
-        const totalTextWidth = containerHeight; // 文字全体の幅を `.container` の高さに一致させる
-        const totalCharWidth = characterCount * charWidth; // 文字の合計幅
-        let letterSpacing = (totalTextWidth - totalCharWidth) / (characterCount - 1); // 文字間の間隔を計算
-  
-        // 600px以下のときは letter-spacing を 0.9倍にして少し狭める
-        if (screenWidth <= 600) {
-            letterSpacing *= 0.85; 
-        }
-        if (screenWidth >= 600) {
-            letterSpacing *= 0.9; 
-        }
-  
-        // `.large-text` に適用
-        largeText.style.letterSpacing = letterSpacing + "px";
-        largeText.style.fontSize = charWidth + "px"; // font-size も適用
+    const viewportHeight = window.innerHeight; // 🔥 ビューポートの高さを取得
+    const largeText = document.querySelector(".large-text");
+    const characterCount = 8; // 文字数（英字8文字）
+
+    // 現在の画面幅を取得
+    const screenWidth = window.innerWidth;
+
+    // 🔥 画面幅によって font-size を切り替え
+    const charWidth = screenWidth <= 665 ? 32 : 48; // 600px以下なら32px、それ以上なら48px
+
+    // 🔥 letter-spacing の計算
+    const totalTextWidth = viewportHeight; // 🔥 文字全体の幅をビューポートの高さに一致させる
+    const totalCharWidth = characterCount * charWidth; // 文字の合計幅
+    let letterSpacing = (totalTextWidth - totalCharWidth) / (characterCount - 1); // 文字間の間隔を計算
+
+    // 🔥 600px以下のときは letter-spacing を 0.9倍にして少し狭める
+    if (screenWidth <= 665) {
+        letterSpacing *= 0.85; 
+    } else {
+        letterSpacing *= 0.9; 
     }
-  
-    window.addEventListener("load", updateLargeTextSpacing); // ページ読み込み時に適用
-    window.addEventListener("resize", updateLargeTextSpacing); // ウィンドウサイズ変更時も適用
+
+    // `.large-text` に適用
+    largeText.style.letterSpacing = letterSpacing + "px";
+    largeText.style.fontSize = charWidth + "px"; // font-size も適用
+}
+
+// 🔥 ページ読み込み時とリサイズ時に適用
+window.addEventListener("load", updateLargeTextSpacing);
+window.addEventListener("resize", updateLargeTextSpacing);
   </script>
     
 </body>
