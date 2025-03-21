@@ -54,22 +54,22 @@ body{
 .home{
   display: flex;
   width: 100%;
- 
-
+  position: relative;
 }
 aside{
   width: 10%;
   background-color: white;
+  z-index: 1;
 }
 .main { 
   width: 80%;
-  background-color: white;
- 
+  background-color: transparent;
+ z-index: 2;
  }
 nav{
   width:10% ;
   background-color:white;
-  
+  z-index: 3;
  }
 
 /* 左側タイトル */
@@ -172,6 +172,7 @@ nav{
 .main{
 display: flex;
 flex-direction: column;
+background-color:transparent;
 }
 h1{
 width: max-content;
@@ -190,11 +191,12 @@ margin-top:100px
   justify-content: center;
   gap:8%;
   margin-top: 80px;
+
 }
 .outer{
   width: 165px;
   height: 165px;
-  background-color: white;
+  background-color:white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,7 +224,7 @@ object-fit: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px ;
+  padding-top: 7vh ;
   padding-left: 10%;  
 }
 .name-container img{
@@ -244,23 +246,22 @@ h2{
  width: 80%;
  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.5);
  margin: 0 auto;/* 箱をセンタ0ーに */
- margin-top: 60px;
+ margin-top: 5vh;
  margin-bottom: 30px;
 }
 .message-container h2{
 text-align: right;
-padding:40px 10% ;
+padding:7vh 5vw ;
 }
 .message-container p{
-  padding: 10px 10% 50px ;
+  padding: 10px 5vw 10vh ;
   font-size: 13px;
   font-weight: 300;
   line-height: 2.8;
   letter-spacing: 13%;
+  text-align: justify;
 }
-.top-container{
-  min-height: 100vh;
-}
+
 .button {
   display: inline-block;
   width: max-content;
@@ -284,7 +285,70 @@ padding:40px 10% ;
   transform: translateX(-1px) translateY(1px) ;
   box-shadow: -0.5px 1px 2px  rgba(0, 0, 0, 0.5);
 }
+.top-container{
+  height: auto;
+}
+@media(max-width:1500px){
+.picture-container{
+  gap:6%;
+}
+.outer{
+  width: 14%;
+  min-width:145px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+.profile-container{
+  width: 90%;
+}
+.message-container{
+  width: 90%;
+}
+h1{
+  margin-left: 4vw;
+}
+}
 @media(max-width:1000px){
+  h1{
+    font-size: 22px;
+    padding: 30px 7vw;
+    margin-left: 8vw;
+   }
+.picture-container{
+ row-gap: 9vh; /* 🔥 列の間隔 */
+ column-gap: 10vw;
+display: grid;
+grid-template-columns: auto auto;
+justify-items: center;
+}
+.profile-container{
+  display: flex;
+ flex-direction: column;
+  margin-top: 10vh;
+  align-items: center;
+width: 80%;
+}
+.name-container{
+  padding-top: 5vh ;
+  padding-left: 0px; 
+}
+.profile-container p{
+  line-height: 2.5;
+  padding: 5vh 7vw;
+}
+.outer{
+  width: 20vw;
+}
+.message-container{
+  width: 80%;
+}
+ .message-container h2{
+  padding:7vh 7vw ;
+ }
+ .message-container p{
+  padding: 10px 7vw 10vh ;
+   line-height: 2.5;
+ }
 /* ナビゲーションメニュー */
   .square-2{
   width: 15vw;
@@ -301,12 +365,27 @@ padding:40px 10% ;
   margin-right:2vw;
   line-height: 2.2em;
   }
-  }
-@media(max-width:600px){
+} 
+@media(max-width:665px){
+  .picture-container{
+  row-gap: 5vh; /* 🔥 列の間隔 */
+  column-gap: 8vw;
+  margin-top: 7vh;    
+}
+.outer{
+  min-width:130px;
+} 
+.profile-container{
+  margin-top: 6vh;
+}
+.button{
+  font-size: 13px;
+  padding: 10px 30px;
+}
   /* 左側タイトル */
   .outer-1{
   transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
-  height: 80px;
+  height: 70px;
   }
   .large-text{
   font-size:32px ;
@@ -329,21 +408,62 @@ padding:40px 10% ;
   line-height: 160%;
   }
   }
-  @media(max-width:450px){
-  /* 左側タイトル */
-  .outer-1{
-  transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
-  height: 60px;
-  }
-   /* ページ下の余白 */
-  .under-container{
-  margin-bottom: 40%;
-  }
-  }
-  @media(max-width:390px){
-   /* ページ下の余白 */
-  .under-container{
-  margin-bottom:30%;
-  }  
-  }
+@media(max-width:450px){
+.picture-container{
+row-gap: 1vh; /* 🔥 列の間隔 */
+column-gap: 1vw;
+}
+.outer{
+width: 80%;
+min-width:100px;
+} 
+.name-container img{
+  width: 90px;
+  height: 90px;
+}
+.profile-container{
+margin-top: 2vh;
+min-width: 220px;
+}
+.profile-container p{
+font-size: 12px;
+line-height: 2;
+padding: 5vh 5vw;
+text-align: justify;
+}
+.message-container{
+min-width: 220px;
+}
+ .message-container h2{
+padding:6vh 7vw 3vh;
+ }
+ .message-container p{
+padding: 10px 7vw 7vh ;
+ line-height: 2;
+ font-size: 12px
+ }
+ h1{
+font-size: 19px;
+padding:4vh 7vw;
+min-width: 120px;
+min-height: 40px;
+ }
+ h2{
+font-size: 20px;
+ }
+/* 左側タイトル */
+.outer-1{
+transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
+height: 60px;
+}
+}
+@media(max-width:390px){
+h1{
+ font-size: 18px;
+padding:4vh 8vw;
+ }
+ h2{
+font-size: 19px;
+ }
+}
   
