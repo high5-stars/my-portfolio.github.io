@@ -471,11 +471,11 @@ line-height: 2.2em;
 max-width: 30vw; 
 }
 }
- @media(max-width:600px){
+ @media(max-width:665px){
 /* 左側タイトル */
 .outer-1{
 transform: rotate(270deg) translateY(10%); /* 270°回転しつつ左端寄せ */
-height: 80px;
+height: 70px;
 }
 .large-text{
 font-size:32px ;
