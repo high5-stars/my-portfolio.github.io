@@ -33,16 +33,25 @@
         <div class="top-container">
             <h1>works</h1>
             <div class="button-container">
-                <a href="works-6.html">＜prev</a>
-                <a href="works-2.html">next＞</a>
+                <a href="works-6.html">&lt;prev</a>
+                <a href="works-2.html">next&gt;</a>
             </div><!--button-container-->
             <div class="picture-container">
-                <div class="outer"><div class="inner"><a href="https://high5stars12345.wixsite.com/mysite-1"><img src="images/lp1.png" alt="AHYwaterLP"></a></div></div>
+                <div class="outer">
+                    <div class="inner">
+                        <a href="https://high5stars12345.wixsite.com/mysite-1">
+                            <picture>
+                                <source srcset="images/mobile1.png" media="(max-width: 450px)">
+                                <img src="images/lp1.png" alt="AHYwaterLP">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
             </div><!--picture-container-->
         </div><!--top-container-->
         <div class="under-container">
             <div class="exp-container">
-                <h2>W.B.C株式会社様（架空企業）LP</h2>
+                <h2>W.B.C株式会社様(架空企業)LP</h2>
                 <h3>ミネラルウォーター販売のランディングページを制作しました。</h3>
                 <h3>-使用ツール-</h3>
                 <p>WIX,Canva,Figma</p>
@@ -55,8 +64,8 @@
 
             </div><!--exp-container-->
             <div class="button-container">
-                <a href="works-6.html">＜prev</a>
-                <a href="works-2.html">next＞</a>
+                <a href="works-6.html">&lt;prev</a>
+                <a href="works-2.html">next&gt;</a>
             </div><!--button-container-->
         </div><!--under-container-->
     </div><!--main-->   
@@ -83,38 +92,38 @@
     window.addEventListener("load", updateOuter1Size); // ページ読み込み時に適用
     window.addEventListener("resize", updateOuter1Size); // ウィンドウサイズ変更時も適用
   </script>
-  <script>
-    function updateLargeTextSpacing() {
-        const containerHeight = document.querySelector(".container").offsetHeight; // `.container` の高さを取得
+    <script>
+        function updateLargeTextSpacing() {
+        const viewportHeight = window.innerHeight; // 🔥 ビューポートの高さを取得
         const largeText = document.querySelector(".large-text");
         const characterCount = 8; // 文字数（英字8文字）
-  
+    
         // 現在の画面幅を取得
         const screenWidth = window.innerWidth;
-  
-        // 画面幅によって font-size を切り替え
-        const charWidth = screenWidth <= 600 ? 32 : 48; // 600px以下なら32px、それ以上なら48px
-  
-        // letter-spacing の計算
-        const totalTextWidth = containerHeight; // 文字全体の幅を `.container` の高さに一致させる
+    
+        // 🔥 画面幅によって font-size を切り替え
+        const charWidth = screenWidth <= 665 ? 32 : 48; // 600px以下なら32px、それ以上なら48px
+    
+        // 🔥 letter-spacing の計算
+        const totalTextWidth = viewportHeight; // 🔥 文字全体の幅をビューポートの高さに一致させる
         const totalCharWidth = characterCount * charWidth; // 文字の合計幅
         let letterSpacing = (totalTextWidth - totalCharWidth) / (characterCount - 1); // 文字間の間隔を計算
-  
-        // 600px以下のときは letter-spacing を 0.9倍にして少し狭める
-        if (screenWidth <= 600) {
+    
+        // 🔥 600px以下のときは letter-spacing を 0.9倍にして少し狭める
+        if (screenWidth <= 665) {
             letterSpacing *= 0.85; 
-        }
-        if (screenWidth >= 600) {
+        } else {
             letterSpacing *= 0.9; 
         }
-  
+    
         // `.large-text` に適用
         largeText.style.letterSpacing = letterSpacing + "px";
         largeText.style.fontSize = charWidth + "px"; // font-size も適用
     }
-  
-    window.addEventListener("load", updateLargeTextSpacing); // ページ読み込み時に適用
-    window.addEventListener("resize", updateLargeTextSpacing); // ウィンドウサイズ変更時も適用
-  </script>
+    
+    // 🔥 ページ読み込み時とリサイズ時に適用
+    window.addEventListener("load", updateLargeTextSpacing);
+    window.addEventListener("resize", updateLargeTextSpacing);
+      </script>
 </body>
 </html>

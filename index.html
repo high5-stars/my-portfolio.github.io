@@ -109,7 +109,7 @@
         const screenWidth = window.innerWidth;
   
         // 画面幅によって font-size を切り替え
-        const charWidth = screenWidth <= 600 ? 32 : 48; // 600px以下なら32px、それ以上なら48px
+        const charWidth = screenWidth <= 665 ? 32 : 48; // 600px以下なら32px、それ以上なら48px
   
         // letter-spacing の計算
         const totalTextWidth = containerHeight; // 文字全体の幅を `.container` の高さに一致させる
@@ -117,10 +117,10 @@
         let letterSpacing = (totalTextWidth - totalCharWidth) / (characterCount - 1); // 文字間の間隔を計算
   
         // 600px以下のときは letter-spacing を 0.9倍にして少し狭める
-        if (screenWidth <= 600) {
+        if (screenWidth <= 665) {
             letterSpacing *= 0.85; 
         }
-        if (screenWidth >= 600) {
+        if (screenWidth >= 665) {
             letterSpacing *= 0.9; 
         }
   
